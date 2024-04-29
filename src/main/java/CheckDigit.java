@@ -4,8 +4,9 @@ public class CheckDigit
    public static int getCheck(int num) 
    {  
      int sum = 0;
+     int temp = num;
      for(int i = 1;  i <= getNumberOfDigits(num); i++){
-  sum += (8-1) * getDigits(num, i);
+  sum += (8-1) * getDigits( temp , i);
      }
      return sum % 10;
    }
