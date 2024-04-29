@@ -14,7 +14,7 @@ public class CheckDigit
        arr.add(0, num % 10);
       num /= 10;
      }
-     for(int j =0; i <arr.size();j++){
+     for(int j =0; j <arr.size();j++){
     total = (arr.get(j) * multiplier) + total;
        multiplier--;
      }
