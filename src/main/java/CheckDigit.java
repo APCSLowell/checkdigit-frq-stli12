@@ -7,18 +7,11 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-     int multiplier = 7;
-     int total =0;
-     ArrayList<Integer> arr = new ArrayList<Integer>();
-     while(num >0){
-       arr.add(0, num % 10);
-      num /= 10;
+     int sum = 0;
+     for(int i = 1; < i <= getNumberOfDigits(num); i++){
+  sum += (8-1) * getDigits(num, i);
      }
-     for(int j =0; j <arr.size();j++){
-    total = (arr.get(j) * multiplier) + total;
-       multiplier--;
-     }
-     return total % 10;
+     return sum % 10;
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
